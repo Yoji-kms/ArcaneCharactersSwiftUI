@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HelloView.swift
 //  ArcaneCharactersSwiftUI
 //
 //  Created by Yoji on 27.11.2024.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HelloView: View {
     var body: some View {
-        TabBarView()
+        Text("Hello world")
     }
 }
 
 #Preview {
-    ContentView()
+    HelloView()
 }
