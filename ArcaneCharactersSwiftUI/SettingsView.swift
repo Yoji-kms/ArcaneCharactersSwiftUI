@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("switch") private var isOn = true
+    @State private var isOn = true
     
     var body: some View {
         Form {

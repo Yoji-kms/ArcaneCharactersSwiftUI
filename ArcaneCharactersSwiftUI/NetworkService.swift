@@ -8,8 +8,6 @@
 import Foundation
 
 final class NetworkService {
-    static let shared = NetworkService()
-    
     func getUrl() -> String {
         return "https://api.tvmaze.com/singlesearch/shows?q=arcane&embed=cast"
     }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InfoView: View {
     @State private var posts = [Post]()
+    let networkService = NetworkService()
     
     var body: some View {
         NavigationView {
@@ -22,7 +23,7 @@ struct InfoView: View {
             .listStyle(.plain)
         }
         .task {
-            let url = NetworkService.shared.getUrl()
+            let url = self.networkService.getUrl()
             let netPosts: Response? = await url.handleAsDecodable()
             if let netPosts {
                 self.posts = netPosts._embedded.cast.map { castItem in
