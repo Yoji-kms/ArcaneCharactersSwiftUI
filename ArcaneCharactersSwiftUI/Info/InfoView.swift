@@ -9,6 +9,8 @@ import SwiftUI
 
 struct InfoView: View {
     @State private var posts = [Post]()
+    var rowHeight: Double
+    var titleOn: Bool
     let networkService = NetworkService()
     
     var body: some View {
@@ -17,9 +19,10 @@ struct InfoView: View {
                 NavigationLink {
                     InfoDetails(post: post)
                 } label: {
-                    InfoRow(post: post)
+                    InfoRow(post: post, rowHeight: rowHeight)
                 }
             }
+            .optionalNavigationTitle(isOn: titleOn, title: "Arcane Characters")
             .listStyle(.plain)
         }
         .task {
@@ -37,5 +40,7 @@ struct InfoView: View {
 }
 
 #Preview {
-    InfoView()
+    @Previewable var rowHeight: Double = 50
+    
+    InfoView(rowHeight: rowHeight, titleOn: true)
 }
