@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @AppStorage("title on") private var titleOn: Bool = true
-    @AppStorage("post row height") private var postRowHeight: Double = 50
+    @AppStorage("titleOn") private var titleOn: Bool = true
+    @AppStorage("postRowHeight") private var postRowHeight: Double = 50
     
     var body: some View {
         TabView {
