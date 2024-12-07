@@ -27,4 +27,11 @@ struct Post: Identifiable {
         self.description = character.url
         self.image = URL(string: character.image?.original ?? "")
     }
+    
+    init() {
+        self.id = 1
+        self.title = "Jayce"
+        self.description = ""
+        self.image = URL(string: "https://static.tvmaze.com/uploads/images/medium_portrait/545/1364527.jpg")
+    }
 }

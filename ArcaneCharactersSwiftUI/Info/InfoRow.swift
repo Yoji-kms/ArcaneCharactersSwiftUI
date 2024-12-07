@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InfoRow: View {
     var post: Post
+    var rowHeight: Double
     
     var body: some View {
         HStack {
@@ -19,12 +20,25 @@ struct InfoRow: View {
             }
                 .scaledToFill()
                 .clipShape(Rectangle())
-                .frame(width: 50, height: 50)
-                .cornerRadius(10)
+                .changeImageSize(self.rowHeight)
                 .padding(.leading, 16)
             
             Text(post.title)
             Spacer()
         }
+        .changeRowHeight(rowHeight)
     }
+}
+
+#Preview {
+    @Previewable var post = Post(
+        id: 1,
+        title: "Jayce",
+        description: "",
+        image: URL(string: "https://static.tvmaze.com/uploads/images/medium_portrait/545/1364527.jpg"
+                  )
+    )
+    @Previewable var rowHeight: Double = 50
+    
+    InfoRow(post: post, rowHeight: rowHeight)
 }

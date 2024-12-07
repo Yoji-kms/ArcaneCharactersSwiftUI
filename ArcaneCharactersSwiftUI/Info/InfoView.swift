@@ -9,6 +9,9 @@ import SwiftUI
 
 struct InfoView: View {
     @State private var posts = [Post]()
+    var rowHeight: Double
+    var titleOn: Bool
+    let networkService = NetworkService()
     
     var body: some View {
         NavigationView {
@@ -16,13 +19,14 @@ struct InfoView: View {
                 NavigationLink {
                     InfoDetails(post: post)
                 } label: {
-                    InfoRow(post: post)
+                    InfoRow(post: post, rowHeight: rowHeight)
                 }
             }
+            .optionalNavigationTitle(isOn: titleOn, title: "Arcane Characters")
             .listStyle(.plain)
         }
         .task {
-            let url = NetworkService.shared.getUrl()
+            let url = self.networkService.getUrl()
             let netPosts: Response? = await url.handleAsDecodable()
             if let netPosts {
                 self.posts = netPosts._embedded.cast.map { castItem in
@@ -36,5 +40,7 @@ struct InfoView: View {
 }
 
 #Preview {
-    InfoView()
+    @Previewable var rowHeight: Double = 50
+    
+    InfoView(rowHeight: rowHeight, titleOn: true)
 }

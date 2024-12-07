@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @AppStorage("titleOn") private var titleOn: Bool = true
+    @AppStorage("postRowHeight") private var postRowHeight: Double = 50
+    
     var body: some View {
         TabView {
-            InfoView()
+            InfoView(
+                rowHeight: postRowHeight,
+                titleOn: titleOn
+            )
                 .tabItem {
                     Label("Info", systemImage: "list.clipboard")
                 }
@@ -18,7 +24,10 @@ struct TabBarView: View {
                 .tabItem {
                     Label("Hello", systemImage: "globe")
                 }
-            SettingsView()
+            SettingsView(
+                titleOn: $titleOn,
+                postRowHeight: $postRowHeight
+            )
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")
                 }
