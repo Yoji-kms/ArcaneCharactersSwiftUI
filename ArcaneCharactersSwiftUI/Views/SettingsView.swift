@@ -10,8 +10,8 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var titleOn: Bool
-    @Binding var postRowHeight: Double
-    @State private var post = Post()
+    @Binding var characterRowHeight: Double
+    @State private var character = Character()
     @State private var isChanging: Bool = false
     
     var body: some View {
@@ -29,29 +29,29 @@ struct SettingsView: View {
             }
             Section {
                 VStack {
-                    TextWithLeftAlignment(text: "Change post row height at Info list")
+                    TextWithLeftAlignment(text: "Change character list row height at Info list")
                     
                     Text("")
                     
                     TextWithLeftAlignment(text: "Row height (from 30 to 150)")
-                    TextWithLeftAlignment(text: "Current row height: \(Int(self.postRowHeight))")
+                    TextWithLeftAlignment(text: "Current row height: \(Int(self.characterRowHeight))")
                     
                     Text("")
                     
                     TextWithLeftAlignment(text: "Image height (from 30 to 150)")
-                    TextWithLeftAlignment(text: "Current image height: \(Int(self.postRowHeight))")
+                    TextWithLeftAlignment(text: "Current image height: \(Int(self.characterRowHeight))")
                     
                     Text("")
                     
                     TextWithLeftAlignment(text: "Text height (from 10 to 50)")
-                    TextWithLeftAlignment(text: "Current row height: \(Int(self.postRowHeight/3))")
+                    TextWithLeftAlignment(text: "Current row height: \(Int(self.characterRowHeight/3))")
                     Slider(
-                        value: $postRowHeight, in: 30...150
+                        value: $characterRowHeight, in: 30...150
                     ) { onChange in
                         self.isChanging = onChange
                     }
                     if self.isChanging {
-                        InfoRow(post: self.post, rowHeight: self.postRowHeight)
+                        InfoRow(character: self.character, rowHeight: self.characterRowHeight)
                     }
                 }
             }
@@ -61,7 +61,7 @@ struct SettingsView: View {
 
 #Preview {
     @Previewable @State var titleOn: Bool = true
-    @Previewable @State var postRowHeight: Double = 50
+    @Previewable @State var characterRowHeight: Double = 50
     
-    SettingsView(titleOn: $titleOn, postRowHeight: $postRowHeight)
+    SettingsView(titleOn: $titleOn, characterRowHeight: $characterRowHeight)
 }

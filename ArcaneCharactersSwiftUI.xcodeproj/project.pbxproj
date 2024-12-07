@@ -6,12 +6,25 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F9615FFD2D0452AF004A60C2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F9615FFB2D0452AC004A60C2 /* README.md */; };
+		F96160032D045D4E004A60C2 /* GalleryScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F96160012D045D4E004A60C2 /* GalleryScreen.png */; };
+		F96160042D045D4E004A60C2 /* CharactersScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F96160002D045D4E004A60C2 /* CharactersScreen.png */; };
+		F96160052D045D4E004A60C2 /* InfoScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F96160022D045D4E004A60C2 /* InfoScreen.png */; };
+		F96160072D045D5A004A60C2 /* SettingsScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F96160062D045D5A004A60C2 /* SettingsScreen.png */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F9615F0B2CF7A7F8004A60C2 /* ArcaneCharactersSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcaneCharactersSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9615FFB2D0452AC004A60C2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F96160002D045D4E004A60C2 /* CharactersScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CharactersScreen.png; sourceTree = "<group>"; };
+		F96160012D045D4E004A60C2 /* GalleryScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GalleryScreen.png; sourceTree = "<group>"; };
+		F96160022D045D4E004A60C2 /* InfoScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InfoScreen.png; sourceTree = "<group>"; };
+		F96160062D045D5A004A60C2 /* SettingsScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsScreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F9615F0D2CF7A7F8004A60C2 /* ArcaneCharactersSwiftUI */ = {
+		F9615FB02CFF1BF1004A60C2 /* ArcaneCharactersSwiftUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ArcaneCharactersSwiftUI;
 			sourceTree = "<group>";
@@ -32,7 +45,12 @@
 		F9615F022CF7A7F8004A60C2 = {
 			isa = PBXGroup;
 			children = (
-				F9615F0D2CF7A7F8004A60C2 /* ArcaneCharactersSwiftUI */,
+				F9615FFB2D0452AC004A60C2 /* README.md */,
+				F96160062D045D5A004A60C2 /* SettingsScreen.png */,
+				F96160002D045D4E004A60C2 /* CharactersScreen.png */,
+				F96160012D045D4E004A60C2 /* GalleryScreen.png */,
+				F96160022D045D4E004A60C2 /* InfoScreen.png */,
+				F9615FB02CFF1BF1004A60C2 /* ArcaneCharactersSwiftUI */,
 				F9615F0C2CF7A7F8004A60C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +79,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				F9615F0D2CF7A7F8004A60C2 /* ArcaneCharactersSwiftUI */,
+				F9615FB02CFF1BF1004A60C2 /* ArcaneCharactersSwiftUI */,
 			);
 			name = ArcaneCharactersSwiftUI;
 			packageProductDependencies = (
@@ -109,6 +127,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9615FFD2D0452AF004A60C2 /* README.md in Resources */,
+				F96160072D045D5A004A60C2 /* SettingsScreen.png in Resources */,
+				F96160032D045D4E004A60C2 /* GalleryScreen.png in Resources */,
+				F96160042D045D4E004A60C2 /* CharactersScreen.png in Resources */,
+				F96160052D045D4E004A60C2 /* InfoScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

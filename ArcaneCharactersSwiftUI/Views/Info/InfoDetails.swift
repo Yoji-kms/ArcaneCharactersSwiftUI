@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct InfoDetails: View {
-    var post: Post
+    var character: Character
     
     var body: some View {
         ScrollView {
             VStack {
-                Text(post.title)
+                Text(character.title)
                     .font(.largeTitle)
-                AsyncImage(url: post.image) { image in
+                AsyncImage(url: character.image) { image in
                     image.resizable()
                 } placeholder: {
                     Image(systemName: "person.crop.square")
@@ -25,13 +25,13 @@ struct InfoDetails: View {
                     .cornerRadius(16)
                     .padding([.all], 16)
                 HStack {
-                    if let url = URL(string: post.description) {
-                        Link("Info about \(post.title) here", destination: url)
+                    if let url = URL(string: character.description) {
+                        Link("Info about \(character.title) here", destination: url)
                             .font(.title2)
                             .padding([.leading, .trailing], 16)
                             .environment(\.openURL, OpenURLAction(handler: handleUrl))
                     } else {
-                        Text("There is no info about \(post.title) yet 😢")
+                        Text("There is no info about \(character.title) yet 😢")
                             .font(.title2)
                             .padding([.leading, .trailing], 16)
                     }
