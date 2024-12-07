@@ -4,6 +4,7 @@
 
 ### Первый таб - список персонажей
 ![alt text](https://github.com/Yoji-kms/ArcaneCharactersSwiftUI/blob/graphics/CharactersScreen.png)
+
 По нажатию на позицию списка происходит переход на описание персонажа
 ![alt text](https://github.com/Yoji-kms/ArcaneCharactersSwiftUI/blob/graphics/InfoScreen.png)
 
