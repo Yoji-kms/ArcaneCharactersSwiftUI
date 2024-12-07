@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct InfoRow: View {
-    var post: Post
+    var character: Character
     var rowHeight: Double
     
     var body: some View {
         HStack {
-            AsyncImage(url: post.image) { image in
+            AsyncImage(url: character.image) { image in
                 image.resizable()
             } placeholder: {
                 Image(systemName: "person.crop.square")
@@ -23,7 +23,7 @@ struct InfoRow: View {
                 .changeImageSize(self.rowHeight)
                 .padding(.leading, 16)
             
-            Text(post.title)
+            Text(character.title)
             Spacer()
         }
         .changeRowHeight(rowHeight)
@@ -31,7 +31,7 @@ struct InfoRow: View {
 }
 
 #Preview {
-    @Previewable var post = Post(
+    @Previewable var character = Character(
         id: 1,
         title: "Jayce",
         description: "",
@@ -40,5 +40,5 @@ struct InfoRow: View {
     )
     @Previewable var rowHeight: Double = 50
     
-    InfoRow(post: post, rowHeight: rowHeight)
+    InfoRow(character: character, rowHeight: rowHeight)
 }

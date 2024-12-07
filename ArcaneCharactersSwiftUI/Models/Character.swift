@@ -1,5 +1,5 @@
 //
-//  Post.swift
+//  Character.swift
 //  ArcaneCharactersSwiftUI
 //
 //  Created by Yoji on 27.11.2024.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Post: Identifiable {
+struct Character: Identifiable, Hashable {
     let id: Int
     let title: String
     let description: String

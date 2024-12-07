@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Response: Decodable {
+struct CastEmbedResponse: Decodable {
     let _embedded: CastResponse
 }
 
@@ -23,9 +23,5 @@ struct CharacterResponse: Decodable {
     let id: Int
     let name: String
     let url: String
-    let image: ImageResponse?
-}
-
-struct ImageResponse: Decodable {
-    let original: String
+    let image: CastImageResponse?
 }
